@@ -2,9 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	model(params){
-		const store = this.get('store');
-		return store.getLeaveById(params.store_id);
+		const record = this.get('record');
+		return record.getLeaveById(params.leave_id);
 	},
 
-	store: Ember.inject.service()
+	record: Ember.inject.service()
 });
