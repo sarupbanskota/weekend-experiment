@@ -1,7 +1,5 @@
-<h3> Leave list </h3>
-
-<table>
-	<thead>
+<table class="ui celled striped table">
+  <thead>
 	  <tr>
 	  	<th> Employee </th>
 	  	<th> Reason </th>
@@ -9,23 +7,23 @@
 	  	<th> To </th>
 	  	<th> Status </th>
 	  	<th> Actions </th>
-	  </tr>
-	</thead>
-	<tbody>
+  	</tr>
+  </thead>
+  <tbody>
 		{{#each model as |leave|}}
-			{{#link-to "leaves.leave" leave tagName="tr"}}
+			{{#link-to "leaves.leave" leave tagName="tr"}}    
 				<td> {{leave.employee}} </td>
 				<td> {{leave.reason}} </td>
 				<td> {{leave.from}} </td>
 				<td> {{leave.to}} </td>
 				<td> {{leave.status}} </td> 
 				<td> 
-					<button {{action "updateLeaveStatus" leave "Approved"}}> Approve </button>
-					<button {{action "updateLeaveStatus" leave "Rejected"}}> Reject </button>
+					<button class="ui green basic button" {{action "updateLeaveStatus" leave "Approved"}}> Approve </button>
+					<button class="ui red basic button" {{action "updateLeaveStatus" leave "Rejected"}}> Reject </button>
 				</td>
 			{{/link-to}}
 		{{/each}}
-	</tbody>
+  </tbody>
 </table>
 
 <p>

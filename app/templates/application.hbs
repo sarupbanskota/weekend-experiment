@@ -1,8 +1,39 @@
-<h2 id="title">Ferien</h2>
+<div class="ui grid stackable relaxed container">
 
-<nav>
-	{{#link-to "index" tagName="li"}} Home {{/link-to}}
-	{{#link-to "leaves" tagName="li"}} Leaves {{/link-to}}
-</nav>
+	<div class="row">
+		<div class="sixteen wide column">
+			<h2 id="title">Ferien</h2>
+		</div>
+	</div>
 
-{{outlet}}
+	<div class="row">
+	  <div class="four wide column">
+			<div class="ui large vertical menu">
+				{{#link-to "leaves"}}
+				  <a class="item active">
+				    <div class="ui teal label">4</div>
+				    Inbox
+				  </a>
+				{{/link-to}}
+			  <a class="item">
+			    <div class="ui label">51</div>
+			    Past
+			  </a>
+			  <a class="item">
+			    <div class="ui label">1</div>
+			    Notifications
+			  </a>
+			  <div class="item">
+			    <div class="ui icon input">
+			      <input type="text" placeholder="Search anything...">
+			      <i class="search icon"></i>
+			    </div>
+			  </div>
+			</div>
+	  </div>
+	  <div class="twelve wide column">
+			{{outlet}}
+	  </div>
+	</div>
+</div>
+
