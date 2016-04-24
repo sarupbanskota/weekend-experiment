@@ -7,6 +7,8 @@
 	  	<th> Reason </th>
 	  	<th> From </th>
 	  	<th> To </th>
+	  	<th> Status </th>
+	  	<th> Actions </th>
 	  </tr>
 	</thead>
 	<tbody>
@@ -16,6 +18,11 @@
 				<td> {{leave.reason}} </td>
 				<td> {{leave.from}} </td>
 				<td> {{leave.to}} </td>
+				<td> {{leave.status}} </td> 
+				<td> 
+					<button {{action "updateLeaveStatus" leave "Approved"}}> Approve </button>
+					<button {{action "updateLeaveStatus" leave "Rejected"}}> Reject </button>
+				</td>
 			{{/link-to}}
 		{{/each}}
 	</tbody>
