@@ -1,16 +1,30 @@
-<form {{action "createLeave" model on="submit"}}>
-	<label for="employee"> Employee </label>
-	{{input type="text" id="employee" value=model.employee}}
+<div class="ui segment">
+	<p> New leave request </p>
 
-	<label for="reason"> Reason </label>
-	{{input type="text" id="reason" value=model.reason}}
+	<form class="ui form" {{action "createLeave" model on="submit"}}>
+	  <div class="field">
+			<label for="employee"> Employee </label>
+			{{input type="text" id="employee" value=model.employee}}
+		</div>
 
-	<label for="from"> From </label>
-	{{input type="text" id="from" value=model.from}}
+	  <div class="field">
+			<label for="reason"> Reason </label>
+			{{input type="text" id="reason" value=model.reason}}
+		</div>
 
-	<label for="to"> To </label>
-	{{input type="text" id="to" value=model.to}}
+	  <div class="field">
+			<label for="from"> From </label>
+			{{input type="text" id="from" value=model.from}}
+		</div>
 
-	<button type="submit"> Go! </button>
+	  <div class="field">
+			<label for="to"> To </label>
+			{{input type="text" id="to" value=model.to}}
+		</div>
 
-</form>
+		<button class="ui basic teal button " type="submit"> Go! </button>
+
+	</form>
+
+</div>
+
