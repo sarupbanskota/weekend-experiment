@@ -1,2 +1,24 @@
 Hello from leaves
+
+<table>
+	<thead>
+	  <tr>
+	  	<th> Employee </th>
+	  	<th> Reason </th>
+	  	<th> From </th>
+	  	<th> To </th>
+	  </tr>
+	</thead>
+	<tbody>
+		{{#each model as |leave|}}
+			{{#link-to "leaves.leave" leave tagName="tr"}}
+				<td> {{leave.employee}} </td>
+				<td> {{leave.reason}} </td>
+				<td> {{leave.from}} </td>
+				<td> {{leave.to}} </td>
+			{{/link-to}}
+		{{/each}}
+	</tbody>
+</table>
+
 {{outlet}}

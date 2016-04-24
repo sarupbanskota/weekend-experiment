@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	model(){
+	model(params){
 		return [{
 			id: 1,
 			employee: "sarup.banskota@mesitis.com",
@@ -20,6 +20,6 @@ export default Ember.Route.extend({
 			from: "2-1-2016",
 			to: "6-1-2016",
 			reason: "huh?"
-		}]
+		}].findBy('id', params.leave_id)
 	}
 });
