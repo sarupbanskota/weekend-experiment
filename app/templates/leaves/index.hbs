@@ -1,0 +1,16 @@
+<form {{action "createLeave" model on="submit"}}>
+	<label for="employee"> Employee </label>
+	{{input type="text" id="employee" value=model.employee}}
+
+	<label for="reason"> Reason </label>
+	{{input type="text" id="reason" value=model.reason}}
+
+	<label for="from"> From </label>
+	{{input type="text" id="from" value=model.from}}
+
+	<label for="to"> To </label>
+	{{input type="text" id="to" value=model.to}}
+
+	<button type="submit"> Go! </button>
+
+</form>

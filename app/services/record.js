@@ -28,6 +28,13 @@ const leaves = [
 ];
 
 export default Ember.Service.extend({
+	newLeave(){
+		return Leave.create();
+	},
+	saveLeave(leave){
+		leave.set('id', 9090);
+		leaves.pushObject(leave);
+	},
 	getLeaves(){
 		return leaves;
 	},
