@@ -23,10 +23,11 @@ export default Ember.Controller.extend({
 					leaveNote: note
 				}
 			);
-			newLeave.save();
-			this.set('responseMessage', `${this.get('leaveNote')} has just been saved!`);
-			this.set('leaveNote', '');
-			this.set('employeeEmail', '');
+			newLeave.save().then((response) => {
+				this.set('responseMessage', `${this.get('leaveNote')} has just been saved!`);
+				this.set('leaveNote', '');
+				this.set('employeeEmail', '');
+			});
 		}
 	}
 });
