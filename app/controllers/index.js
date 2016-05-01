@@ -16,10 +16,11 @@ export default Ember.Controller.extend({
 		processLeave(){
 			const email = this.get('employeeEmail');
 			const note  = this.get('leaveNote');
+			console.log(this.get('leaveNote'));
 			const newLeave = this.store.createRecord('leave', 
 				{
 					email: email,
-					leaveNode: note
+					leaveNote: note
 				}
 			);
 			newLeave.save();
