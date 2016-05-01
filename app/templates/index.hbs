@@ -1,6 +1,20 @@
-<h2> New leave application </h2>
-<p>{{responseMessage}}</p>
-{{textarea value=leaveNote placeholder="Leave notes about this leave..."}}
-<br>
-{{input value=employeeEmail placeholder="Employee's email address"}}
-<button disabled={{isDisabled}} {{action 'processLeave'}}> Go! </button>
+{{#if responseMessage}}
+	<div class="ui success message">
+	  <div class="header">
+	    {{responseMessageHeader}}
+	  </div>
+	  <p>{{responseMessage}}</p>
+	</div>
+{{/if}}
+
+<div class="ui form">
+  <div class="field">
+    <label>Which employee is this for?</label>
+    {{input value=employeeEmail placeholder="Org email"}}
+  </div>
+  <div class="field">
+    <label>What's the leave all about?</label>
+    {{textarea value=leaveNote placeholder="Where, when, how ..." rows=2}}
+  </div>
+  <button disabled={{isDisabled}} {{action 'processLeave'}} class="ui teal button"> Go! </button>
+</div>

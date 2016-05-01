@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 	responseMessage: '',
+	responseMessageHeader: '',
 	leaveNote: '',
 	employeeEmail: '',
 
@@ -24,7 +25,8 @@ export default Ember.Controller.extend({
 				}
 			);
 			newLeave.save().then((response) => {
-				this.set('responseMessage', `${this.get('leaveNote')} has just been saved!`);
+				this.set('responseMessage', `${email}'s leave request has been saved!`);
+				this.set('responseMessageHeader', 'Done!');
 				this.set('leaveNote', '');
 				this.set('employeeEmail', '');
 			});
