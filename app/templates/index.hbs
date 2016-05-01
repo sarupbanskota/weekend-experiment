@@ -1,0 +1,6 @@
+<h2> New leave application </h2>
+<p>{{responseMessage}}</p>
+{{textarea value=leaveNote placeholder="Leave notes about this leave..."}}
+<br>
+{{input value=employeeEmail placeholder="Employee's email address"}}
+<button disabled={{isDisabled}} {{action 'processLeave'}}> Go! </button>
