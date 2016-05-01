@@ -1,4 +1,7 @@
-import Ember from 'ember';
+import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
 
-export default Ember.Object.extend({
+export default Model.extend({
+  leaveNote: attr('string'),
+  email: attr('string')
 });
