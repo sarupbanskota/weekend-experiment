@@ -1,4 +1,9 @@
-{{#link-to 'index' tagName="li"}} Home {{/link-to}}
-{{#link-to 'admin.leaves' tagName="li"}} Leaves {{/link-to}}
-{{outlet}}
+<div class="ui container">
+  <div class="ui top attached tabular menu">
+    {{partial 'navbar'}}
+  </div>
 
+  <div class="ui bottom attached segment">
+    <p>{{outlet}}</p>
+  </div>
+</div>
