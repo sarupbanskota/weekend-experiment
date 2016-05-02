@@ -2,28 +2,28 @@
   <div class="two fields">
     <div class="field">
       <label>First Name</label>
-      <input placeholder="First Name" type="text">
+      <input placeholder="First Name" type="text" value={{firstName}}>
     </div>
     <div class="field">
       <label>Last Name</label>
-      <input placeholder="Last Name" type="text">
+      <input placeholder="Last Name" type="text" value={{lastName}}>
     </div>
   </div>
   <div class="one field">
     <div class="field">
       <label>Email</label>
-      <input placeholder="Email" type="email">
+      <input placeholder="Email" type="email" value={{email}}>
     </div>
   </div>
   <div class="two fields">
     <div class="field">
       <label>Category</label>
-      <input placeholder="Category" type="text">
+      <input placeholder="Category" type="text" value={{category}}>
     </div>
     <div class="field">
       <label>Manager</label>
-      <input placeholder="Manager" type="text">
+      <input placeholder="Manager" type="text" value={{manager}}>
     </div>
   </div>
-  <div class="ui submit teal button">Go!</div>
+  <div class="ui submit teal button" disabled={{isDisabled}}>Go!</div>
 </div>

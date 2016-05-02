@@ -7,13 +7,15 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('leaves', function(){
-    this.route('leave', {path: '/:leave_id'});
+  	this.route('leave', {path: '/:leave_id'});
   });
   this.route('admin', function() {
     this.route('leaves');
   });
   this.route('employees', function(){
-    this.route('new');
+  	this.route('index', {path: '/'}, function(){
+      this.route('new');
+    });
   });
 });
 
