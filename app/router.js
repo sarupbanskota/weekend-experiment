@@ -13,9 +13,7 @@ Router.map(function() {
     this.route('leaves');
   });
   this.route('employees', function(){
-  	this.route('index', {path: '/'}, function(){
-      this.route('new');
-    });
+  	this.route('new');
   });
 });
 
