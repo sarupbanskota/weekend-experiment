@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('employees', function(){
   	this.route('new');
   });
+  this.route('protected');
 });
 
 export default Router;
