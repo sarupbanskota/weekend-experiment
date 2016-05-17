@@ -7,8 +7,8 @@ export default Ember.Controller.extend({
   categoryIsValid: Ember.computed.notEmpty('category'),
   managerIsValid: Ember.computed.notEmpty('manager'),
   inputIsValid: Ember.computed.and(
-    'emailIsValid', 
-    'firstNameIsValid', 
+    'emailIsValid',
+    'firstNameIsValid',
     'lastNameIsValid',
     'categoryIsValid',
     'managerIsValid'
@@ -24,7 +24,7 @@ export default Ember.Controller.extend({
         manager: this.get('manager')
       });
       console.log(newEmployee);
-      newEmployee.save().then((response) => {
+      newEmployee.save().then(() => {
         this.set('responseMessage', `New employee has been saved!`);
         this.set('responseMessageHeader', 'Done!');
         this.set('email', '');
@@ -32,8 +32,7 @@ export default Ember.Controller.extend({
         this.set('lastName', '');
         this.set('category', '');
         this.set('manager', '');
-      })
-
+      });
     }
   }
 });

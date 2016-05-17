@@ -18,13 +18,13 @@ export default Ember.Controller.extend({
 			const email = this.get('employeeEmail');
 			const note  = this.get('leaveNote');
 			console.log(this.get('leaveNote'));
-			const newLeave = this.store.createRecord('leave', 
+			const newLeave = this.store.createRecord('leave',
 				{
 					email: email,
 					leaveNote: note
 				}
 			);
-			newLeave.save().then((response) => {
+			newLeave.save().then(() => {
 				this.set('responseMessage', `${email}'s leave request has been saved!`);
 				this.set('responseMessageHeader', 'Done!');
 				this.set('leaveNote', '');
